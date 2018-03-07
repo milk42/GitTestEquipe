@@ -1,0 +1,54 @@
+<!--div générale-->
+<div  class="general" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutAlign="space-between " >
+
+
+<!--coté gauche-->
+<div class="coteGauche" fxFlex="40"  fxFlex.xs="50">
+<!--Bouton ajouter et rechercher-->
+<button mat-icon-button>
+  <mat-icon color="accent" aria-label="Icon plus pour ajouter" (click)="afficherAjoutComponent()">add_circle</mat-icon>
+</button>
+
+<button mat-icon-button>
+  <mat-icon color="accent" aria-label="Icon plus pour rechercher" 
+  (click)="afficherRechercheComponent()">pageview</mat-icon>
+</button>
+
+
+<!--Liste d'objet-->
+<mat-card>
+  <mat-card-title>Liste de Véhicules</mat-card-title>
+  <hr>
+    <mat-card-content style="text-align:left">
+     
+             <mat-list> 
+                  <mat-list-item  class="item" *ngFor="let v of vehicules"  (click)="afficherId(v)">
+<!-- <mat-list-item  class="item" *ngFor="let v of vehicules"  [routerLink]="[`/vehicules`, {id :v.id, foo: 'bar' 3}]" > -->
+                      <!-- (click)="afficherId(v)" -->
+                      <!-- (click)="afficherDetailComponent(v.id)" -->
+                       <!-- <mat-icon mat-list-icon>time_to_leave</mat-icon> -->
+                        <p mat-line>
+                          {{v.id}} ) <strong>{{v.type}}</strong> : {{v.modele}} : {{v.ajoute_le | date}}
+                        </p> 
+
+                    <mat-divider></mat-divider>
+                </mat-list-item> 
+             </mat-list> 
+
+     </mat-card-content> 
+    </mat-card>
+
+</div>
+
+
+
+<!--coté droit-->
+<div  class="coteDroit" fxFlex="60" fxFlex.xs="50" [style.padding.em]="5.6">
+<!--RouterLinkCHild sur les 3 composants : rechercheAvancée, détail, ajout-->
+  <mat-card>
+
+    <router-outlet></router-outlet>
+     
+  </mat-card>
+</div>
+</div>

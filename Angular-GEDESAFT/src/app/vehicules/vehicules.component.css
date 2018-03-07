@@ -1,0 +1,12 @@
+
+.general {
+    background-color:#ddd;
+    padding: 2%;
+}
+.coteGauche {
+    padding-top: 50px;
+    text-align: center;
+}
+.item {
+    cursor: zoom-in;
+}

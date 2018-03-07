@@ -1,0 +1,36 @@
+<form>
+    <div mat-dialog-content style="height:1000px; width:1000px; background-image: url(./../assets/image/site/logodorigine.jpg)">
+    
+      <h1 mat-dialog-title>Connexion</h1>
+      <br>
+    
+       <div mat-dialog-content>
+        <p>Identifiant</p>
+        <mat-form-field>
+           <!-- <input matInput type="text" name="identifiant" [(ngModel)]="data.identifiant"> -->
+           
+          <input matInput >
+        </mat-form-field>
+      
+        <p>Mot de passe</p>
+        <mat-form-field>
+           <!-- <input matInput type="text" name="password" [(ngModel)]="data.password">  -->
+           
+          <input matInput >
+        </mat-form-field>
+      </div>
+      <br>
+      
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Annuler</button>
+        <button mat-button [mat-dialog-close]="data.connexion" cdkFocusInitial>Se connecter</button>
+      </div>
+      <br>
+    
+      <div>
+          <p><a href="" RouterLink="" >Mot de passe oublié ?</a></p>
+            <!-- mettre la méthode ouvrirPopup quand on click sur cette phrase -->
+      </div>
+    
+    </div>
+    </form>

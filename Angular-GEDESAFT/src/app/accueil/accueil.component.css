@@ -1,0 +1,17 @@
+
+mat-grid-tile {
+    background: lightblue;
+  }
+
+
+button {
+    width: 160px;
+    height: 100px;
+    color: white;
+    background-color: cadetblue;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 10%;
+    box-shadow: 0px 15px 30px -7px #2038;
+}
